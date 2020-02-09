@@ -9,7 +9,7 @@ function generate_qr() {
         return false;
     }
 
-    const checkdigit = fillCheckDigit(fivecode);
+    const checkdigit = getCheckDigit(fivecode);
     const isbnfull = "9784641" + fivecode + checkdigit;
     const url = "http://www.yuhikaku.co.jp/books/detail/" + isbnfull;
     spn.innerText = url;
@@ -23,7 +23,7 @@ function generate_qr() {
     return false;
 }
 
-function fillCheckDigit(fivecode) {
+function getCheckDigit(fivecode) {
     const isbn12 = "9784641" + fivecode;
     const array = String(isbn12).split("");
     let total = 0;
