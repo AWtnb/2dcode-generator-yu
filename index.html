@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>yuhikaku-2dcode-generator</title>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <h1>有斐閣商品ページ2次元コード生成</h1>
+    <p>生成された2次元コードを右クリックして「名前を付けて画像を保存」してください。<br>※ISBNが13桁の商品のみが対象です。</p>
+    <form name="form1" id="id_form1" action="" onsubmit="return generate_qr()">
+        5桁コードを半角で入力：<br>
+        <input type="text" name="textbox1" id="id_textbox1" size="10" maxlength="5" value="">
+        <input type="button" value="生成！" onclick="generate_qr()">
+    </form>
+
+    <p><span id="id_span1"></span></p>
+    <p><img src="https://i.gyazo.com/8fe83b567a2bdb65f3402bd90cc586e4.png" id="qr"></p>
+
+</body>
+
+</html>
